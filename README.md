@@ -115,19 +115,60 @@ Angular Archetecture
 
             Data Binding
 
-                is to use the state and behabiour of component class inside the template.
+                is to use the state and behaviour of component class inside the template.
 
                 Interpolation
 
                     {{angular-expression}}
 
                 Two Way Data Binding
+
+                    is used to bind a field to a form element (input,select,textarea ..etc.,)
+
+                    pass the value of the field in to the form-element initially
+                    and when the form element is edited, the chagned value is passed back to the field.
+
+                    'ngModel' is a attribute directive from 'FormsModule' used for two-way data binding
+                    'FormsModule' is from '@angular/forms'
+
+                    <input [(ngModel)]="field" />
+
                 One Way Data Binding
                     Attribute Binding
+
+                        <element [attribute]="angular-expression" > content </element>
+
+                        <p title="this is a hint"> this is a apara </p>
+                        <p [title]="x"> this is a apara </p>
+
                     Style Binding
+                        
+                        <element [style.cssProperty]="angular-expression" > content </element>
+
                     Css Class Binding
+
+                        <element [class.CssClassName]="boolean-expression"> content </element>
+
                     Event Binding
 
+                        to bind a method to an event so that the method is triggered
+                        when the event occurs.
+
+                        <element (event-directive)="method()"> content </element>
+
+                        html event attributes           event-directives
+
+                            onSubmit                        ngSubmit
+                            onClick                         click
+                            onDblClick                      dblclick
+                            onMouseOver                     mouseover
+                            onBlur                          blur
+                            onChange                        change
+                            onFocus                         focus
+                            ......etc
+        
+        Strucutral Directives
+        
         Attribute Directives
 
             Attributes Directives are custom html attributes.
@@ -139,7 +180,7 @@ Angular Archetecture
 
             }
 
-        Strucutral Directives
+        
 
 
         Services
