@@ -1,0 +1,28 @@
+.welcome{
+    background-color: #ffffff;
+}
+
+.welcome form{
+    margin:10px;
+}
+
+.welcome input,.welcome label{
+    display: inline-block;
+}
+
+.welcome div,.welcome p{
+    margin: 5px;
+}
+
+.welcome img{
+    width: 200px;
+}
+
+.border{
+    border: 2px solid #000000;
+}
+
+.center{
+    margin:auto;
+    display: block;
+}

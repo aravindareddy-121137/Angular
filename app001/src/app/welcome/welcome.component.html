@@ -1,0 +1,27 @@
+<section class="box welcome">
+    <div>
+        <img 
+            [src]="logos[logoIndex]" 
+            [style.width.px]="logoWidth"
+            [class.border]="applyBorder"
+            [class.center]="applyCenter" 
+            (click)="toggle()" />
+    </div>
+    <p>Hello <strong>{{userName}}</strong>! We are happy to see you here..</p>
+    <form>
+        <div>
+            <label>User Name: </label>
+            <input type="text" name="unm" [(ngModel)]="userName" />
+        </div>
+        <div>
+            <label>Width:
+                <input type="range" name="w" [(ngModel)]="logoWidth" min="50" max="500"/>
+                {{logoWidth}} px.
+            </label>
+        </div>
+        <div>
+            <label> <input type="checkbox" name="c1" [(ngModel)]="applyBorder" /> Put Border </label>
+            <label> <input type="checkbox" name="c2" [(ngModel)]="applyCenter" /> Align Center </label>
+        </div>
+    </form>
+</section>
