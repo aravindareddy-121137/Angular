@@ -1,0 +1,18 @@
+<div class="box frds">
+
+    <div *ngIf="friends.length===0">
+        <strong>No Friends to Show</strong>
+    </div>
+
+    <div *ngIf="friends.length>0">
+        <ol>
+            <li *ngFor="let f of friends">{{f}}</li>
+        </ol>
+    </div>
+
+    <form>
+        <label>Friend: <input type="text" name="tb1" [(ngModel)]="friend" /></label>
+        <button type="button" (click)="add()">ADD</button>
+        <button type="button" (click)="delete()">REMOVE</button>
+    </form>
+</div>

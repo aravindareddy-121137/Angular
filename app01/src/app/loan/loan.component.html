@@ -1,0 +1,13 @@
+<div class="box lns">
+    <form (ngSubmit)="compute()">
+        <label>Loan Amount: <input type="number" name="tb1" [(ngModel)]="p"/></label>
+        <label>No Of EMIS: <input type="number" name="tb2" [(ngModel)]="t"/></label>
+        <label>Interest Rate per month: <input type="number" name="tb3" [(ngModel)]="r"/></label>
+        <button>Compute</button>
+    </form>
+
+    <div>
+        <p><strong>Simple Interest: {{si}}</strong></p>
+        <p><strong>EMI Amount: {{emi}}</strong></p>
+    </div>
+</div>

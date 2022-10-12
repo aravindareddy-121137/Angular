@@ -169,6 +169,10 @@ Angular Archetecture
         
         Strucutral Directives
         
+            *ngIf
+            *ngFor
+            ngSwitch    *ngSwitchCase *ngDefault
+            
         Attribute Directives
 
             Attributes Directives are custom html attributes.
@@ -179,9 +183,6 @@ Angular Archetecture
             class FastMovingStockDirective{
 
             }
-
-        
-
 
         Services
             @Injectable({
