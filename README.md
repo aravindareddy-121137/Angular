@@ -200,3 +200,60 @@ Angular Archetecture
 
             }
 
+            a pipe is used to transform data into another before it is rendered
+
+            in-built pipes
+                lowercase
+                uppercase
+                titlecase
+                number
+                currency
+                date
+
+Integrate bootstrap css library into angular
+-------------------------------------------------------
+
+    1. install bootstrap
+            npm install bootstrap --save
+
+    2. link its css and js files to angular
+
+            angular.json
+               |
+               |-styles     include 'node_modules/bootstrap/dist/css/bootstrap.min.css'
+               |
+               |-scripts    include 'node_modules/bootstrap/dist/js/bootstrap.min.js'
+
+Routing
+--------------------------------------------------------
+
+    enables to render a component based on the URL Path.
+
+    RouterModule from '@angular/router' is sued to perform routing.
+
+        Route               class               {
+                                                    path:'',
+                                                    component:ComponentClass,
+                                                    pathMatch:'startsWith|full',
+                                                    redirect:'',
+                                                    children:[]
+                                                }
+        
+        Routes              class               array of Route Objects
+        
+        forRoot             method              is used to laod routes into RouterModule
+
+        router-outlet       component           is used to reserve place for a matching componenet
+                                                in the top-level component template
+
+        routerLink          attribute directive is used on 'a' tags instead of 'href' attributes
+
+        routerLinkActive    attribute directive is used on 'a' tags to hold a css class to be 
+                                                applied on active links
+        
+        Router              service             is used to navigate from one component to another
+                                                programatically 
+                                                        navigateByUrl('')
+
+        ActivatedRoute      service             is used to extract info like query parameters, 
+                                                path parameters, ..etc from the current url.
