@@ -1,1 +1,39 @@
-<p>loans works!</p>
+<div class="col-sm-11 mx-auto border border-primary p-3">
+
+    <form class="row mb-3" (ngSubmit)="compute()">
+        <div class="col">
+            <label>Loan Amount: <strong>{{loan.loanAmount|currency:'INR'}}</strong></label>
+            <input type="range" min="1000" max="1000000" [(ngModel)]="loan.loanAmount" name="lamt" class="form-control"/>
+        </div>
+        <div class="col">
+            <label>Term: <strong>{{loan.term}} years</strong></label>
+            <input type="range" min="1" max="10" [(ngModel)]="loan.term" name="term" class="form-control"/>
+        </div>
+        <div class="col">
+            <label>ROI: <strong>{{loan.roi}} %</strong></label>
+            <input type="range" min="1" max="20" [(ngModel)]="loan.roi" name="roi" class="form-control"/>
+        </div>
+        <div class="col-2 d-grid">
+            <button class="btn btn-primary">COMPUTE</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Emi#</th>
+                <th>Principal</th>
+                <th>Interest</th>
+                <th>Emi Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emi of loan.emis">
+                <td class="text-end">{{emi.emiNumber}}</td>
+                <td class="text-end">{{emi.principalComponent|number:'1.2-2'}}</td>
+                <td class="text-end">{{emi.interestComponent|number:'1.2-2'}}</td>
+                <td class="text-end">{{emi.emi|number:'1.2-2'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

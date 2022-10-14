@@ -257,3 +257,4 @@ Routing
 
         ActivatedRoute      service             is used to extract info like query parameters, 
                                                 path parameters, ..etc from the current url.
+
