@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { LoansComponent } from './loans/loans.component';
+import { NumberSeriesComponent } from './number-series/number-series.component';
+import { NumberSeriesGroupComponent } from './number-series-group/number-series-group.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { LoansComponent } from './loans/loans.component';
     AppComponent,
     HeaderComponent,
     PipesDemoComponent,
-    LoansComponent
+    LoansComponent,
+    NumberSeriesComponent,
+    NumberSeriesGroupComponent
   ],
   imports: [
     BrowserModule,

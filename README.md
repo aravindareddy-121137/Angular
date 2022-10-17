@@ -258,3 +258,52 @@ Routing
         ActivatedRoute      service             is used to extract info like query parameters, 
                                                 path parameters, ..etc from the current url.
 
+RxJs - Observable
+-------------------------------------------------------------------------------------
+
+    Observable are enhanced Promise objects.
+
+    Both Promise from javascript (ES6) and Observable from 'rxjs' are used to 
+    accomidate communication between asynchronous jobs and fore-ground job.
+
+    Promise can emit a value only after the job is completly done 
+    whee as Observable can emit values continuosly until the job is done.
+
+    Promsie can be usbscribed only once but an observable can be subscribed
+    any number of times and can be unsbricribed also.
+
+    const job = observer =>{
+        observer.next(val); //emit values
+        observer.error(val); //emit errors
+        observer.complete(); //indicate job completion
+    };
+    
+    let ob = new Observable(job);
+
+    ob.subscribe({
+        next: val => {/*recive the value*/},
+        error: err => {/*receive the error*/},
+        complete: () => {/*once job is done we acknoledge it */ }
+    });
+
+HttpClient 
+--------------------------------------------------------------------------------
+
+    is a service coming from HttpClientModule, HttpClientModule from '@angular/common/http'.
+
+    HttpClient
+        get(endPointUrl) : Observable<data>
+        put(endPointUrl,reqBody) : Observable<data>
+        post(endPointUrl,reqBody) : Observable<data>
+        delete(endPointUrl) : Observable<void>
+
+Case Study
+--------------------------------------------------------------------------------
+
+    LoanTrackingApp
+        1. a user can register himself/herself
+        2. a user can retrive/add/delete/modify a loan record
+
+    json-server based rest-api BackEnd
+
+    angular UI/UX app   FrontEnd
