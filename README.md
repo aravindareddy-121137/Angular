@@ -283,11 +283,11 @@ RxJs - Observable
     ob.subscribe({
         next: val => {/*recive the value*/},
         error: err => {/*receive the error*/},
-        complete: () => {/*once job is done we acknoledge it */ }
+        complete: () => {/*once job is done we acknowledge it */ }
     });
 
 HttpClient 
---------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
     is a service coming from HttpClientModule, HttpClientModule from '@angular/common/http'.
 
@@ -298,12 +298,12 @@ HttpClient
         delete(endPointUrl) : Observable<void>
 
 Case Study
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
     LoanTrackingApp
         1. a user can register himself/herself
         2. a user can retrive/add/delete/modify a loan record
 
-    json-server based rest-api BackEnd
+    spring-boot java8 mysql rest-api BackEnd (Eclispe/STS)
 
     angular UI/UX app   FrontEnd
