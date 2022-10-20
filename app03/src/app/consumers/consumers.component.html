@@ -19,6 +19,7 @@
                 <th>Consumer#</th>
                 <th>FullName</th>
                 <th>Email</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,10 @@
                 <td>{{c.consumerId}}</td>
                 <td>{{c.fullName}}</td>
                 <td>{{c.mailId}}</td>
+                <td>
+                    <a class="btn btn-info btn-sm me-2" [routerLink]="['/editConsumer',c.consumerId]">EDIT</a>
+                    <button class="btn btn-danger btn-sm" (click)="doDelete(c.consumerId)">DELETE</button>
+                </td>
             </tr>
         </tbody>
     </table>

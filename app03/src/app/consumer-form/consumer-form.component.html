@@ -1,1 +1,25 @@
-<p>consumer-form works!</p>
+<div class="col-sm-5 p-2 mx-auto">
+    <form (ngSubmit)="save()" #f="ngForm">
+        <div>
+            <label>Consumer Id:</label>
+            <input type="number" name="tb1" [(ngModel)]="consumer.consumerId" readonly class="form-control" />
+        </div>
+        <div>
+            <label>Full Name*:</label>
+            <input type="text" name="tb2" [(ngModel)]="consumer.fullName" required class="form-control" #fnm="ngModel"/>
+            <div class="alert alert-info p-2" *ngIf="fnm.invalid && (fnm.touched || fnm.dirty)">
+                This field is mandate
+            </div>
+        </div>
+        <div>
+            <label>Mail Id*:</label>
+            <input type="text" name="tb3" [(ngModel)]="consumer.mailId" required class="form-control" #mid="ngModel"/>
+            <div class="alert alert-info p-2" *ngIf="mid.invalid && (mid.touched || mid.dirty)">
+                This field is mandate
+            </div>
+        </div>
+        <div class="d-grid">
+            <button [disabled]="f.invalid" class="btn btn-primary">SAVE</button>
+        </div>
+    </form>
+</div>

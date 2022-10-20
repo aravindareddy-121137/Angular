@@ -307,3 +307,27 @@ Case Study
     spring-boot java8 mysql rest-api BackEnd (Eclispe/STS)
 
     angular UI/UX app   FrontEnd
+
+Angular Forms
+------------------------------------------------
+
+    Template Driven Form
+
+        FormsModule
+            ngForm
+            ngModel
+
+            depends on html5 validators
+            are difficult to test as major of their part is written in html.
+            are used in very simple cases where the form might not have more than 2 fields
+
+    Model Driven Form   / Reactive Form
+        
+        ReactiveFormsModule
+            FormGroup
+            FormControl
+            formControlName
+
+            depends on angular in-built validators.
+            are easy to test as major of theri part is written in typescript.
+            are used to complex and nested form based sinarios

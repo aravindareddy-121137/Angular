@@ -6,7 +6,8 @@ import { ConsumersComponent } from './consumers/consumers.component';
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'/consumers'},
   {path:'consumers',component:ConsumersComponent},
-  {path:'addConsumer',component:ConsumerFormComponent}
+  {path:'addConsumer',component:ConsumerFormComponent},
+  {path:'editConsumer/:cid',component:ConsumerFormComponent}
 ];
 
 @NgModule({
