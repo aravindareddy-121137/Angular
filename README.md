@@ -329,5 +329,30 @@ Angular Forms
             formControlName
 
             depends on angular in-built validators.
-            are easy to test as major of theri part is written in typescript.
+            are easy to test as major of there part is written in typescript.
             are used to complex and nested form based sinarios
+
+json-server
+-----------------------------------------------------------------
+
+    is a javascript library that generate fake rest-api from a .json file.
+
+    md json-api
+    cd json-api
+    npm init -y
+    npm install --save json-server
+
+    create a db.json file with hypothetical data
+
+    package.json
+        "start":"json-server --port 8888 --watch ./db.json --id consumerId"
+
+
+Assignment - Contact Book
+-------------------------------------------------------------------
+
+    1. create / delete/ update/ retive contacts.
+    2. Each contact shall have a contactId,fullName,dateOfBirth,mobile,mailId
+    3. The UX app must be an angular one
+    4. the backend rest-api can be of either java / json-server
+

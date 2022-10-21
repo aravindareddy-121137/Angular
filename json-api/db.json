@@ -1,0 +1,14 @@
+{
+  "consumers": [
+    {
+      "consumerId": 1,
+      "fullName": "Rama",
+      "mailId": "rama@gmail.com"
+    },
+    {
+      "fullName": "Laxman",
+      "mailId": "laxman@gmail.com",
+      "consumerId": 2
+    }
+  ]
+}
