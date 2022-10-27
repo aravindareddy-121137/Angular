@@ -347,7 +347,6 @@ json-server
     package.json
         "start":"json-server --port 8888 --watch ./db.json --id consumerId"
 
-
 Assignment - Contact Book
 -------------------------------------------------------------------
 
@@ -356,3 +355,12 @@ Assignment - Contact Book
     3. The UX app must be an angular one
     4. the backend rest-api can be of either java / json-server
 
+Component Hyrarchy
+--------------------------------------------------------------------
+
+    Parent component has to share data with child component,
+        the child component must have a data memeber marked as @Input()
+        the parent component can use that data memeber as an attribute to pass data.
+
+    Child Component can raise events using EvetnEmitter Fields marked as @Output()
+     and parent can handle those events.

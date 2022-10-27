@@ -1,0 +1,25 @@
+<div class="row p-2" *ngIf="f.invalid">
+    <div class="col">
+        <div class="alert alert-info" *ngIf="fnm.invalid && (fnm.touched || fnm.dirty)">
+            Full Name is mandate
+        </div>
+        <div class="alert alert-info" *ngIf="mid.invalid && (mid.touched || mid.dirty)">
+            <p *ngIf="mid.errors!['required']">Mail Id is mandate</p>
+            <p *ngIf="mid.errors!['email']">Expecting a valid email</p>
+        </div>
+    </div>
+</div>
+<form class="row p-2 border-bottom border-info" (ngSubmit)="save()" [formGroup]="f">
+    <div class="col-sm-2">
+        <input type="number" formControlName="consumerId" readonly class="form-control" />
+    </div>
+    <div class="col">
+        <input type="text" formControlName="fullName" class="form-control" />
+    </div>
+    <div class="col">
+        <input type="text" formControlName="mailId" class="form-control" />
+    </div>
+    <div class="col-sm-3">
+        <button [disabled]="f.invalid" class="btn btn-sm btn-primary">SAVE</button>
+    </div>
+</form>

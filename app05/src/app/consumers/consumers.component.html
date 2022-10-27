@@ -1,0 +1,29 @@
+<div class="col-sm-8 mx-auto">
+    <h3>Consumers </h3>
+
+    <div class="alert alert-info p-4 fw-bold" *ngIf="!errMsg && !consumers">
+        Please wait while loading data...
+    </div>
+
+    <div class="alert alert-danger p-4 fw-bold" *ngIf="errMsg">
+        {{errMsg}}
+    </div>
+
+    <div class="alert alert-info p-4 fw-bold" *ngIf="consumers && consumers.length==0">
+        No consumer records found
+    </div>
+
+    <div class="row fw-bold p-2 border-bottom border-primary text-center">
+        <div class="col-sm-2">ConsumerId</div>
+        <div class="col">Full Name</div>
+        <div class="col">MailId</div>
+        <div class="col-sm-3">Action</div>
+    </div>
+    <app-consumer-form></app-consumer-form>
+    <ng-container *ngIf="consumers && consumers.length>0">
+        <ng-container *ngFor="let c of consumers">
+            <app-consumer-row [consumer]="c"></app-consumer-row>
+        </ng-container>
+    </ng-container>
+
+</div>

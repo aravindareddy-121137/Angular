@@ -6,9 +6,14 @@
       "mailId": "rama@gmail.com"
     },
     {
+      "consumerId": 2,
       "fullName": "Laxman",
-      "mailId": "laxman@gmail.com",
-      "consumerId": 2
+      "mailId": "lakshman45678@gmail.com"
+    },
+    {
+      "consumerId": 3,
+      "fullName": "Jatayu",
+      "mailId": "jatayu@gmail.com"
     }
   ]
 }

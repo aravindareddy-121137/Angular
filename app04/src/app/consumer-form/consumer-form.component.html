@@ -1,0 +1,26 @@
+<div class="col-sm-5 p-2 mx-auto">
+    <form (ngSubmit)="save()" [formGroup]="f">
+        <div>
+            <label>Consumer Id:</label>
+            <input type="number" formControlName="consumerId" readonly class="form-control" />
+        </div>
+        <div>
+            <label>Full Name*:</label>
+            <input type="text" formControlName="fullName" class="form-control" />
+            <div class="alert alert-info p-2" *ngIf="fnm.invalid && (fnm.touched || fnm.dirty)">
+                This field is mandate
+            </div>
+        </div>
+        <div>
+            <label>Mail Id*:</label>
+            <input type="text" formControlName="mailId" class="form-control" />
+            <div class="alert alert-info p-2" *ngIf="mid.invalid && (mid.touched || mid.dirty)">
+                <p *ngIf="mid.errors!['required']">This field is mandate</p>
+                <p *ngIf="mid.errors!['email']">Expecting a valid email</p>
+            </div>
+        </div>
+        <div class="d-grid">
+            <button [disabled]="f.invalid" class="btn btn-primary">SAVE</button>
+        </div>
+    </form>
+</div>
