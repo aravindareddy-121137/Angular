@@ -33,4 +33,18 @@ export class ConsumersComponent implements OnInit {
       });
     }
   }
+
+  markEditable(cid:number){
+    let index = this.consumers.findIndex(c => c.consumerId===cid);
+    if(index>-1){
+      this.consumers[index].editable=true;
+    }
+  }
+
+  unMarkEditable(cid:number){
+    let index = this.consumers.findIndex(c => c.consumerId===cid);
+    if(index>-1){
+      this.consumers[index].editable=undefined;
+    }
+  }
 }

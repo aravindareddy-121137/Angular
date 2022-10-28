@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Consumer } from '../models/consumer';
 
 @Component({
@@ -9,11 +9,27 @@ import { Consumer } from '../models/consumer';
 export class ConsumerRowComponent implements OnInit {
 
   @Input()
-  consumer!:Consumer;
+  consumer!: Consumer;
 
-  constructor() { }
+  @Output()
+  doDelete: EventEmitter<number>;
+
+  @Output()
+  markEditable: EventEmitter<number>;
+
+  constructor() {
+    this.doDelete = new EventEmitter<number>();
+    this.markEditable = new EventEmitter<number>();
+  }
 
   ngOnInit(): void {
   }
 
+  raiseDeleteEvent() {
+    this.doDelete.emit(this.consumer.consumerId);
+  }
+
+  raiseMarkEditableEvent(){
+    this.markEditable.emit(this.consumer.consumerId);
+  }
 }

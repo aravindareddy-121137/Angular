@@ -7,13 +7,8 @@
     },
     {
       "consumerId": 2,
-      "fullName": "Laxman",
+      "fullName": "Laxman ",
       "mailId": "lakshman45678@gmail.com"
-    },
-    {
-      "consumerId": 3,
-      "fullName": "Jatayu",
-      "mailId": "jatayu@gmail.com"
     }
   ]
 }

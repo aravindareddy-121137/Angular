@@ -3,7 +3,7 @@
     <div class="col">{{consumer.fullName}}</div>
     <div class="col">{{consumer.mailId}}</div>
     <div class="col-sm-3">
-        <button class="btn btn-sm btn-primary me-1">EDIT</button>
-        <button class="btn btn-sm btn-danger">DELETE</button>
+        <button class="btn btn-sm btn-primary me-1" (click)="raiseMarkEditableEvent()">EDIT</button>
+        <button class="btn btn-sm btn-danger" (click)="raiseDeleteEvent()">DELETE</button>
     </div>
 </div>

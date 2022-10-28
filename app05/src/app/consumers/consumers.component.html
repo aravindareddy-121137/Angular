@@ -19,10 +19,21 @@
         <div class="col">MailId</div>
         <div class="col-sm-3">Action</div>
     </div>
-    <app-consumer-form></app-consumer-form>
+    <app-consumer-form (saved)="loadData()"></app-consumer-form>
     <ng-container *ngIf="consumers && consumers.length>0">
         <ng-container *ngFor="let c of consumers">
-            <app-consumer-row [consumer]="c"></app-consumer-row>
+            <app-consumer-row  
+                *ngIf="!c.editable"
+                [consumer]="c" 
+                (markEditable)="markEditable($event)"
+                (doDelete)="doDelete($event)">
+            </app-consumer-row>
+            <app-consumer-form 
+                *ngIf="c.editable"
+                [consumerId]="c.consumerId" 
+                (cancelEvent)="unMarkEditable($event)"
+                (saved)="loadData()">
+            </app-consumer-form>
         </ng-container>
     </ng-container>
 

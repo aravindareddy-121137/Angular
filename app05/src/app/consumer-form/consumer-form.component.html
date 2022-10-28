@@ -20,6 +20,7 @@
         <input type="text" formControlName="mailId" class="form-control" />
     </div>
     <div class="col-sm-3">
-        <button [disabled]="f.invalid" class="btn btn-sm btn-primary">SAVE</button>
+        <button [disabled]="f.invalid" class="btn btn-sm btn-primary me-1">SAVE</button>
+        <button type="button" class="btn btn-sm btn-danger" *ngIf="!isNew" (click)="raiseCencelEvent()">CANCEL</button>
     </div>
 </form>
